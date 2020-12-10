@@ -1,6 +1,5 @@
-adapters = []
-with open('input10.txt') as file:
-    adapters = [int(line) for line in file]
+import file_input
+adapters = file_input.get_numerical_input(10)
 adapters.sort()
 
 def part1():

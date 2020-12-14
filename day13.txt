@@ -1,0 +1,27 @@
+This is using the example input, but the process is identical.
+
+939
+7,13,x,x,59,x,31,19
+
+
+Part 1: Calculate the closest multiple of p where p is the bus ID (easy with basic math and a calculator).
+
+939
+7: 945
+13: 949
+59: 944
+31: 961
+19: 950
+
+
+Part 2: Setup a series of equations to describe t % p for each of the bus IDs p (nicely, they are all prime).
+
+7 | t + 0 	t % 7 = 0
+13 | t + 1	t % 13 = 12
+59 | t + 4	t % 59 = 55
+31 | t + 6	t % 31 = 25
+19 | t + 7	t % 19 = 12
+
+We can then use Chinese Remainder Theorem to solve for t by writing a code for it (or just plugging it into an online calculator such as https://www.dcode.fr/chinese-remainder).
+
+t = 1068781
